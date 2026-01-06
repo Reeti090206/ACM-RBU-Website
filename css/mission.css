@@ -3,6 +3,11 @@
    ==================== */
 
 /* Mission Section */
+
+.about-text p {
+  color: rgba(255, 255, 255, 1);
+}
+
 .mission-section {
   padding: var(--spacing-xl) 0;
   position: relative;
@@ -191,7 +196,7 @@
 
 .about-text p {
   font-size: var(--font-size-md);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
   line-height: 2;
   margin-bottom: 1rem;
 }
@@ -284,4 +289,9 @@
 
 .feature-card:nth-child(3) {
   transition-delay: 0.3s;
+}
+
+
+.content{
+
 }
