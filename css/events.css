@@ -2,11 +2,13 @@
    EVENTS SECTION - CYBER TIMELINE
    ==================== */
 
-.events-section {
-  padding: var(--spacing-xl) 0;
-  position: relative;
-  background: linear-gradient(180deg, transparent 0%, rgba(56, 189, 248, 0.02) 50%, transparent 100%);
+.past-event-card {
+  max-width: 1100px;        /* limits box size */
+  margin: 0 auto 24px;     /* centers the box */
+  padding: 32px 40px;      /* space inside box */
+  box-sizing: border-box;  /* ensures padding works */
 }
+
 
 /* Filter Tabs */
 .event-filters {
