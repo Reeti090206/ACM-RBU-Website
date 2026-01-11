@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ====================
    HERO SECTION STYLES
    ==================== */
@@ -14,14 +15,66 @@
    PARTICLE CANVAS
    ==================== */
 
+=======
+/* ==========================================================================
+   1. VARIABLES & RESET (Add to global.css or top of hero.css)
+   ========================================================================== */
+:root {
+  /* Colors */
+  --deep-navy: #0a0c10;
+  --electric-blue: #38bdf8;
+  --sky-blue: #9ddcff;
+  --white: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  /* Typography */
+  --font-main: 'Sora', sans-serif;
+  --font-size-3xl: 3.5rem;
+  --font-size-md: 1.1rem;
+  
+  /* Transitions */
+  --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--deep-navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. HERO SECTION LAYOUT
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 5% 60px 5%;
+  overflow: hidden;
+}
+
+>>>>>>> 7d31377 (Done)
 #particles-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
+<<<<<<< HEAD
 /* ====================
    HERO CONTAINER
    ==================== */
@@ -46,24 +99,47 @@
 .hero-left {
   padding: 2rem 0;
   max-width: 650px;
+=======
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* ==========================================================================
+   3. LEFT CONTENT (Text & Buttons)
+   ========================================================================== */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+>>>>>>> 7d31377 (Done)
 }
 
 .hero-badge {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.4rem;
   background: rgba(56, 189, 248, 0.1);
   border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 50px;
+  border-radius: 100px;
   color: var(--electric-blue);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 2rem;
-  animation: fadeInDown 0.6s ease;
+  animation: fadeInDown 0.8s ease;
 }
 
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
+<<<<<<< HEAD
   line-height: 1.15;
   margin-bottom: 1.5rem;
 
@@ -147,39 +223,75 @@
   box-shadow: 0 8px 30px rgba(56, 189, 248, 0.6);
 }
 
+=======
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fff 0%, #9ddcff 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-description {
+  font-size: var(--font-size-md);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  max-width: 550px;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 1.2s ease;
+}
+
+>>>>>>> 7d31377 (Done)
 .btn-secondary {
   padding: 1rem 2.5rem;
   background: transparent;
   color: #fff;
   font-weight: 600;
-  border: 2px solid var(--electric-blue);
-  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   cursor: pointer;
+<<<<<<< HEAD
   transition: all 0.3s ease;
+=======
+  font-size: 1rem;
+  transition: var(--transition-normal);
+  backdrop-filter: blur(10px);
+>>>>>>> 7d31377 (Done)
 }
 
 .btn-secondary:hover {
-  background: rgba(56, 189, 248, 0.1);
-  transform: translateY(-3px);
+  background: var(--electric-blue);
+  border-color: var(--electric-blue);
+  color: var(--deep-navy);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
 }
 
+<<<<<<< HEAD
 /* ====================
    RIGHT SIDE – SPHERE
    ==================== */
 
+=======
+/* ==========================================================================
+   4. RIGHT CONTENT (Digital Sphere)
+   ========================================================================== */
+>>>>>>> 7d31377 (Done)
 .hero-right {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   width: 100%;
   max-width: 600px;
+=======
+>>>>>>> 7d31377 (Done)
 }
 
 .digital-sphere {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   position: relative;
-  perspective: 1000px;
 }
 
 /* ====================
@@ -191,9 +303,10 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  animation: sphereRotate 20s linear infinite;
+  animation: sphereRotate 30s linear infinite;
 }
 
+<<<<<<< HEAD
 @keyframes sphereRotate {
   from { transform: rotateY(0deg) rotateX(0deg); }
   to   { transform: rotateY(360deg) rotateX(360deg); }
@@ -203,11 +316,14 @@
    SPHERE RINGS
    ==================== */
 
+=======
+>>>>>>> 7d31377 (Done)
 .sphere-ring {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   border-radius: 50%;
   border: 2px solid rgba(56, 189, 248, 0.3);
   animation: ringPulse 3s ease-in-out infinite;
@@ -245,16 +361,26 @@
    SPHERE NODES
    ==================== */
 
-.sphere-node {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: var(--electric-blue);
+=======
+  border: 1px solid rgba(56, 189, 248, 0.2);
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
-  animation: nodeFloat 4s ease-in-out infinite;
 }
 
+.sphere-ring:nth-child(1) { width: 100%; height: 100%; }
+.sphere-ring:nth-child(2) { width: 80%; height: 80%; transform: translate(-50%, -50%) rotateX(70deg); }
+.sphere-ring:nth-child(3) { width: 60%; height: 60%; transform: translate(-50%, -50%) rotateY(70deg); }
+
+>>>>>>> 7d31377 (Done)
+.sphere-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--electric-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--electric-blue);
+}
+
+<<<<<<< HEAD
 .sphere-node:nth-child(4) { top: 20%; left: 30%; }
 .sphere-node:nth-child(5) { top: 40%; right: 20%; }
 .sphere-node:nth-child(6) { bottom: 30%; left: 25%; }
@@ -324,23 +450,44 @@
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
+=======
+/* ==========================================================================
+   5. ANIMATIONS
+   ========================================================================== */
+@keyframes sphereRotate {
+  from { transform: rotate3d(1, 1, 1, 0deg); }
+  to { transform: rotate3d(1, 1, 1, 360deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+>>>>>>> 7d31377 (Done)
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+<<<<<<< HEAD
 /* ====================
    RESPONSIVE
    ==================== */
 
 @media (max-width: 968px) {
+=======
+/* ==========================================================================
+   6. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1024px) {
+>>>>>>> 7d31377 (Done)
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
   }
+<<<<<<< HEAD
 
   .hero-right {
     max-width: 100%;
@@ -371,3 +518,9 @@
     width: 100%;
   }
 }
+=======
+  .hero-left { align-items: center; }
+  .hero-title { font-size: 2.8rem; }
+  .digital-sphere { width: 300px; height: 300px; }
+}
+>>>>>>> 7d31377 (Done)
